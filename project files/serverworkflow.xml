@@ -1,0 +1,19 @@
+(function() {
+	
+	try {
+		var inputs = {};
+		inputs['current'] = ; // GlideRecord of table:  
+		inputs['table_name'] = 'u_task_table_2';
+
+		// Start Asynchronously: Uncomment to run in background.
+		// sn_fd.FlowAPI.getRunner().flow('global.task_table').inBackground().withInputs(inputs).run();
+				
+		// Execute Synchronously: Run in foreground.
+		sn_fd.FlowAPI.getRunner().flow('global.task_table').inForeground().withInputs(inputs).run();
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+	
+})();
